@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGetBuilder.Win", "NuGetBuilder.Win\NuGetBuilder.Win.csproj", "{80A976AD-3781-4DE4-9DE5-D62C6CC66E2A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGetCore", "NuGetCore", "{82EA0353-0B0D-4DB2-BAF8-EEA3CB18C2BC}"
+	ProjectSection(SolutionItems) = preProject
+		NuGetCore\Microsoft.Data.Edm.dll = NuGetCore\Microsoft.Data.Edm.dll
+		NuGetCore\Microsoft.Data.Edm.xml = NuGetCore\Microsoft.Data.Edm.xml
+		NuGetCore\Microsoft.Data.OData.dll = NuGetCore\Microsoft.Data.OData.dll
+		NuGetCore\Microsoft.Data.OData.xml = NuGetCore\Microsoft.Data.OData.xml
+		NuGetCore\Microsoft.Data.Services.Client.dll = NuGetCore\Microsoft.Data.Services.Client.dll
+		NuGetCore\Microsoft.Data.Services.Client.xml = NuGetCore\Microsoft.Data.Services.Client.xml
+		NuGetCore\Microsoft.Web.XmlTransform.dll = NuGetCore\Microsoft.Web.XmlTransform.dll
+		NuGetCore\NuGet.Core.dll = NuGetCore\NuGet.Core.dll
+		NuGetCore\NuGet.Core.pdb = NuGetCore\NuGet.Core.pdb
+		NuGetCore\NuGet.VisualStudioResources.dll = NuGetCore\NuGet.VisualStudioResources.dll
+		NuGetCore\NuGet.VisualStudioResources.pdb = NuGetCore\NuGet.VisualStudioResources.pdb
+		NuGetCore\System.Spatial.dll = NuGetCore\System.Spatial.dll
+		NuGetCore\System.Spatial.xml = NuGetCore\System.Spatial.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGetBuilder.Core", "NuGetBuilder.Core\NuGetBuilder.Core.csproj", "{87BB853F-57A1-4E75-8C43-0E4E6C5E299E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGetBuilder.CoreTests", "NuGetBuilder.CoreTests\NuGetBuilder.CoreTests.csproj", "{D38C3120-2AD2-4CD6-8694-1D5228E83F22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80A976AD-3781-4DE4-9DE5-D62C6CC66E2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80A976AD-3781-4DE4-9DE5-D62C6CC66E2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80A976AD-3781-4DE4-9DE5-D62C6CC66E2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80A976AD-3781-4DE4-9DE5-D62C6CC66E2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87BB853F-57A1-4E75-8C43-0E4E6C5E299E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87BB853F-57A1-4E75-8C43-0E4E6C5E299E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87BB853F-57A1-4E75-8C43-0E4E6C5E299E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87BB853F-57A1-4E75-8C43-0E4E6C5E299E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D38C3120-2AD2-4CD6-8694-1D5228E83F22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D38C3120-2AD2-4CD6-8694-1D5228E83F22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D38C3120-2AD2-4CD6-8694-1D5228E83F22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D38C3120-2AD2-4CD6-8694-1D5228E83F22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

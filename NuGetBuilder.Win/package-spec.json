@@ -1,0 +1,72 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "JSON Schema for my JSON file format",
+
+  "type": "object",
+
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "NuGet package id."
+    },
+    "summary": {
+      "type": "string",
+      "description": "NuGet package summary (shown in VS packages broser window)."
+    },
+    "description": {
+      "type": "string",
+      "description": "NuGet package decription."
+    },
+    "authors": {
+      "type": "array",
+      "description": "An array of package authors.",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "owners": {
+      "type": "array",
+      "description": "An array of package owners.",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "description": "Package dependencies.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "git": {
+      "type": "string",
+      "description": "Git repository"
+    },
+    "sources": {
+      "type": "array",
+      "description": "Package sources",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "destinations": {
+      "type": "array",
+      "description": "Package destinations",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

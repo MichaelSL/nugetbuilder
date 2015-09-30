@@ -1,0 +1,1 @@
+<Playlist Version="1.0"><Add Test="NuGetBuilder.Core.Tests.GitManagerTests.CloneRepositoryTest" /><Add Test="NuGetBuilder.Core.Tests.PackageBuilderTests.BuildPackageTest" /></Playlist>
