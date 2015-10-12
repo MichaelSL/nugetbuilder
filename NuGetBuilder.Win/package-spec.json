@@ -11,11 +11,11 @@
     },
     "summary": {
       "type": "string",
-      "description": "NuGet package summary (shown in VS packages broser window)."
+      "description": "NuGet package summary (shown in VS packages browser window)."
     },
     "description": {
       "type": "string",
-      "description": "NuGet package decription."
+      "description": "NuGet package description."
     },
     "authors": {
       "type": "array",
