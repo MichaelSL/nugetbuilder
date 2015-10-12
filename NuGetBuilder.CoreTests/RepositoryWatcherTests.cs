@@ -29,7 +29,7 @@ namespace NuGetBuilder.CoreTests
 
                     List<ManifestFile> manifestFiles = packageActualizer.MakeFilesList(package);
 
-                    Core.PackageBuilder builder = new Core.PackageBuilder();
+                    Core.IPackageBuilder builder = ninject.Get<Core.IPackageBuilder>();
                     builder.BuildPackage(repoPath, packageMetadata, manifestFiles.ToArray());
 
                     IPackagePublisher publisher = ninject.Get<IPackagePublisher>();
