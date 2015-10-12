@@ -18,7 +18,7 @@ namespace NuGetBuilder.CoreTests
             IPackageDefinitionsRepository repo = ninject.Get<IPackageDefinitionsRepository>();
             foreach(var package in repo.GetPackages())
             {
-                GitManager man = new GitManager();
+                IGitManager man = ninject.Get<IGitManager>();
                 var repoPath = man.ActualizeRepositoryContents(package.GitUrl);
                 IComponentVersionChecker versionChecker = ninject.Get<IComponentVersionChecker>();
                 if (versionChecker.CheckVersion(package.Version, repoPath))
