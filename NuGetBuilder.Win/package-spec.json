@@ -1,6 +1,7 @@
 ﻿{
   "$schema": "http://json-schema.org/draft-04/schema",
-  "title": "JSON Schema for my JSON file format",
+
+  "title": "PackageDefinition",
 
   "type": "object",
 
@@ -37,9 +38,10 @@
       "type": "array",
       "description": "Package dependencies.",
       "items": {
+        "title": "packageDependency",
         "type": "object",
         "properties": {
-          "id": {
+          "depId": {
             "type": "string"
           },
           "version": {
