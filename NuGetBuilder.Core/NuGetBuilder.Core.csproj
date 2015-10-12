@@ -72,13 +72,15 @@
     <Compile Include="IPackagePublisher.cs" />
     <Compile Include="MockPackageDefinitionsRepository.cs" />
     <Compile Include="PackageBuilder.cs" />
-    <Compile Include="PackageDefinition.cs" />
+    <Compile Include="PackageDefinition\PackageDefinition.cs" />
+    <Compile Include="PackageDefinition\PackageDependency.cs" />
     <Compile Include="PackageJsonContentUtils.cs" />
     <Compile Include="PackageJsonVersionChecker.cs" />
     <Compile Include="PackagePublisher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="PackageDefinition\package-spec.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -88,6 +90,9 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\LibGit2Sharp.0.21.0.176\build\net40\LibGit2Sharp.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\LibGit2Sharp.0.21.0.176\build\net40\LibGit2Sharp.props'))" />
   </Target>
+  <PropertyGroup>
+    <PreBuildEvent>$(SolutionDir)\SchemaToPocoTool\Cvent.SchemaToPoco.Console.exe -s $(ProjectDir)\PackageDefinition\package-spec.json -n NuGetBuilder.Core -o $(ProjectDir)\PackageDefinition -nd</PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

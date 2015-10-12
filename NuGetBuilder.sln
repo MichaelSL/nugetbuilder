@@ -39,6 +39,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGetBuilder.Core", "NuGetB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGetBuilder.CoreTests", "NuGetBuilder.CoreTests\NuGetBuilder.CoreTests.csproj", "{D38C3120-2AD2-4CD6-8694-1D5228E83F22}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SchemaToPocoTool", "SchemaToPocoTool", "{61759C47-26D9-4AF1-9FE3-79084B043604}"
+	ProjectSection(SolutionItems) = preProject
+		SchemaToPocoTool\Cvent.SchemaToPoco.Console.exe = SchemaToPocoTool\Cvent.SchemaToPoco.Console.exe
+		SchemaToPocoTool\Cvent.SchemaToPoco.Console.exe.config = SchemaToPocoTool\Cvent.SchemaToPoco.Console.exe.config
+		SchemaToPocoTool\Cvent.SchemaToPoco.Core.dll = SchemaToPocoTool\Cvent.SchemaToPoco.Core.dll
+		SchemaToPocoTool\NDesk.Options.dll = SchemaToPocoTool\NDesk.Options.dll
+		SchemaToPocoTool\Newtonsoft.Json.dll = SchemaToPocoTool\Newtonsoft.Json.dll
+		SchemaToPocoTool\NLog.dll = SchemaToPocoTool\NLog.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

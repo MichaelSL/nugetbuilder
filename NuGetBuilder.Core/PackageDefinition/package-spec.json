@@ -21,7 +21,6 @@
     "authors": {
       "type": "array",
       "description": "An array of package authors.",
-      "minItems": 1,
       "items": {
         "type": "string"
       }
@@ -29,7 +28,6 @@
     "owners": {
       "type": "array",
       "description": "An array of package owners.",
-      "minItems": 1,
       "items": {
         "type": "string"
       }
@@ -50,14 +48,13 @@
         }
       }
     },
-    "git": {
+    "gitUrl": {
       "type": "string",
       "description": "Git repository"
     },
     "sources": {
       "type": "array",
       "description": "Package sources",
-      "minItems": 1,
       "items": {
         "type": "string"
       }
@@ -65,7 +62,6 @@
     "destinations": {
       "type": "array",
       "description": "Package destinations",
-      "minItems": 1,
       "items": {
         "type": "string"
       }
