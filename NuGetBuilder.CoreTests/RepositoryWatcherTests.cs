@@ -18,7 +18,7 @@ namespace NuGetBuilder.CoreTests
             IPackageDefinitionsRepository repo = ninject.Get<IPackageDefinitionsRepository>();
             foreach(var package in repo.GetPackages())
             {
-                GitManager man = new GitManager();
+                IGitManager man = ninject.Get<IGitManager>();
                 var repoPath = man.ActualizeRepositoryContents(package.GitUrl);
                 IComponentVersionChecker versionChecker = ninject.Get<IComponentVersionChecker>();
                 if (versionChecker.CheckVersion(package.Version, repoPath))
@@ -29,7 +29,7 @@ namespace NuGetBuilder.CoreTests
 
                     List<ManifestFile> manifestFiles = packageActualizer.MakeFilesList(package);
 
-                    Core.PackageBuilder builder = new Core.PackageBuilder();
+                    Core.IPackageBuilder builder = ninject.Get<Core.IPackageBuilder>();
                     builder.BuildPackage(repoPath, packageMetadata, manifestFiles.ToArray());
 
                     IPackagePublisher publisher = ninject.Get<IPackagePublisher>();

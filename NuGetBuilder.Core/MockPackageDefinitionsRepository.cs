@@ -8,14 +8,19 @@ namespace NuGetBuilder.Core
 {
     public class MockPackageDefinitionsRepository : IPackageDefinitionsRepository
     {
+        public List<PackageDefinition> Packages { get; set; } = new List<PackageDefinition>();
+
         public void AddPackage(PackageDefinition packageDefinition)
         {
-            throw new NotImplementedException();
+            if (!this.Packages.Contains(packageDefinition))
+            {
+                this.Packages.Add(packageDefinition);
+            }
         }
 
         public IList<PackageDefinition> GetPackages()
         {
-            throw new NotImplementedException();
+            return this.Packages;
         }
     }
 }
