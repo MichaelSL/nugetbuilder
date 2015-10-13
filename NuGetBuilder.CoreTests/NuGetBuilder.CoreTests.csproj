@@ -72,6 +72,7 @@
     <Compile Include="PackageBuilderTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryWatcherTests.cs" />
+    <Compile Include="NuGetPackageVersioningTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
