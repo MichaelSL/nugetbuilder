@@ -13,7 +13,7 @@ namespace NuGetBuilder.Core
         public override void Load()
         {
             Bind<IPackageDefinitionsRepository>().To<MockPackageDefinitionsRepository>();
-            Bind<IComponentVersionChecker>().To<PackageJsonVersionChecker>();
+            Bind<IComponentVersionChecker>().To<NugetPackageVersionChecker>();
             Bind<IPackageContentUtils>().To<PackageJsonContentUtils>();
             Bind<IPackagePublisher>().To<PackagePublisher>();
             Bind<IGitManager>().To<GitManager>();

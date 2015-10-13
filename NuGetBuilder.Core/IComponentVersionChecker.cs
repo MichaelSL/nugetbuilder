@@ -9,6 +9,6 @@ namespace NuGetBuilder.Core
 {
     public interface IComponentVersionChecker
     {
-        bool CheckVersion(SemanticVersion version, string repoPath);
+        bool CheckVersion(string packageId, string repoPath);
     }
 }
