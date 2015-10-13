@@ -21,7 +21,7 @@ namespace NuGetBuilder.CoreTests
                 IGitManager man = ninject.Get<IGitManager>();
                 var repoPath = man.ActualizeRepositoryContents(package.GitUrl);
                 IComponentVersionChecker versionChecker = ninject.Get<IComponentVersionChecker>();
-                if (versionChecker.CheckVersion(package.Version, repoPath))
+                if (versionChecker.CheckVersion(package.Id, repoPath))
                 {
                     IPackageContentUtils packageActualizer = ninject.Get<IPackageContentUtils>();
                     ManifestMetadata packageMetadata = packageActualizer.ReadRepositoryMetadata(repoPath);
