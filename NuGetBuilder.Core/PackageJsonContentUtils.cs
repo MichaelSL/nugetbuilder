@@ -18,7 +18,9 @@ namespace NuGetBuilder.Core
 
         public List<ManifestFile> MakeFilesList(PackageDefinition package)
         {
-            throw new NotImplementedException();
+            List<ManifestFile> res = new List<ManifestFile>();
+            res = package.Sources.Select(item => new ManifestFile() { Source = item.Source, Target = item.Destination }).ToList();
+            return res;
         }
 
         public ManifestMetadata ReadRepositoryMetadata(string repoPath)
