@@ -52,18 +52,34 @@
       "type": "string",
       "description": "Git repository"
     },
+    //"sources": {
+    //  "type": "array",
+    //  "description": "Package sources",
+    //  "items": {
+    //    "type": "string"
+    //  }
+    //},
+    //"destinations": {
+    //  "type": "array",
+    //  "description": "Package destinations",
+    //  "items": {
+    //    "type": "string"
+    //  }
+    //},
     "sources": {
       "type": "array",
-      "description": "Package sources",
+      "description": "Package contents.",
       "items": {
-        "type": "string"
-      }
-    },
-    "destinations": {
-      "type": "array",
-      "description": "Package destinations",
-      "items": {
-        "type": "string"
+        "title": "packageContentDef",
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "destination": {
+            "type": "string"
+          }
+        }
       }
     }
   }

@@ -39,10 +39,7 @@ namespace NuGetBuilder.Core
         // Git repository
         public string GitUrl { get; set; }
         
-        // Package sources
-        public List<string> Sources { get; set; }
-        
-        // Package destinations
-        public List<string> Destinations { get; set; }
+        // Package contents.
+        public List<PackageContentDef> Sources { get; set; }
     }
 }

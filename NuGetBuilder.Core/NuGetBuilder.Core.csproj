@@ -72,6 +72,7 @@
     <Compile Include="IPackagePublisher.cs" />
     <Compile Include="MockPackageDefinitionsRepository.cs" />
     <Compile Include="PackageBuilder.cs" />
+    <Compile Include="PackageDefinition\PackageContentDef.cs" />
     <Compile Include="PackageDefinition\PackageDefinition.cs" />
     <Compile Include="PackageDefinition\PackageDependency.cs" />
     <Compile Include="PackageJsonContentUtils.cs" />
