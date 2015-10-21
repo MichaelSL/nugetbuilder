@@ -9,6 +9,6 @@ namespace NuGetBuilder.Core
 {
     public interface IPackagePublisher
     {
-        void PublishNewPackageVersion(ManifestMetadata packageMetadata);
+        void PublishNewPackageVersion(string packagePath);
     }
 }

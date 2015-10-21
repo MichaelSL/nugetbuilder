@@ -12,16 +12,16 @@ namespace NuGetBuilder.Core
     {
         PackageServer packageServer = new PackageServer("", "");
 
-        public void PublishNewPackageVersion(ManifestMetadata packageMetadata)
+        public void PublishNewPackageVersion(string packagePath)
         {
-            string packagePath = "";
-            string nugetSource = "nuget.org";
-            packageServer.PushPackage("key", null, -1, 60 * 1000, false);
+            
+            //string nugetSource = "nuget.org";
+            //packageServer.PushPackage("key", null, -1, 60 * 1000, false);
 
             PushCommand cmd = new PushCommand();
-            cmd.Arguments.Add("C:\\Packages\\MyPkg.nupkg");
+            cmd.Arguments.Add(packagePath);
             cmd.Source = "nuget.org";
-            cmd.ApiKey = "key";
+            cmd.ApiKey = "4f3ad946-b109-44a7-849e-cc19d799f719";
             cmd.Timeout = 10 * 1000;
             cmd.Execute();
 
